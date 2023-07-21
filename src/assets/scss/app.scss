@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Font
+@import 'fonts';
+*,body{
+    @apply bg-dark-50 text-dark-700;
+}

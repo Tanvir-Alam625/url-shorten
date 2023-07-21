@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Toolkit</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <!-- Set theme mode, language and app dir from local storage -->
+  <script>
+    const themeMode = localStorage.getItem('theme-mode');
+    if (themeMode) document.documentElement.classList.add(themeMode);
+    const dir = localStorage.getItem('dir');
+    if (dir) document.documentElement.setAttribute('dir', dir);
+  </script>
+</body>
+
+</html>
