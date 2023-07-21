@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 
-interface ShortUrl {
+export interface ShortUrl {
   id: string;
   shortUrl: string;
   longUrl: string;
 }
+const getUrls = () => {
+  const savedShortUrls = localStorage.getItem('shortUrls');
+  return savedShortUrls ? JSON.parse(savedShortUrls) : [];
+};
 
 export function useShortUrls() {
-  const [shortUrls, setShortUrls] = useState<ShortUrl[]>(() => {
-    const savedShortUrls = localStorage.getItem('shortUrls');
-    return savedShortUrls ? JSON.parse(savedShortUrls) : [];
-  });
+  const [shortUrls, setShortUrls] = useState<ShortUrl[]>(getUrls);
 
   useEffect(() => {
     localStorage.setItem('shortUrls', JSON.stringify(shortUrls));
