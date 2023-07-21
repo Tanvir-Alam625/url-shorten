@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 export interface ShortUrl {
   id: string;
   shortUrl: string;
   longUrl: string;
 }
-const getUrls = () => {
-  const savedShortUrls = localStorage.getItem('shortUrls');
-  return savedShortUrls ? JSON.parse(savedShortUrls) : [];
-};
 
 export function useShortUrls() {
-  const [shortUrls, setShortUrls] = useState<ShortUrl[]>(getUrls);
+  const [shortUrls, setShortUrls] = useState<ShortUrl[]>(() => {
+    const savedShortUrls = localStorage.getItem('shortUrls');
+    return savedShortUrls ? JSON.parse(savedShortUrls) : [];
+  });
 
   useEffect(() => {
     localStorage.setItem('shortUrls', JSON.stringify(shortUrls));
@@ -26,8 +25,9 @@ export function useShortUrls() {
   };
 
   const deleteShortUrl = (id: string) => {
-    setShortUrls((prevShortUrls) => prevShortUrls.filter((url) => url.id !== id));
+    const updatedUrls = shortUrls.filter((url) => url.id !== id);
+    setShortUrls(updatedUrls);
   };
-
+  console.log(shortUrls);
   return { shortUrls, addShortUrl, updateShortUrl, deleteShortUrl };
 }
