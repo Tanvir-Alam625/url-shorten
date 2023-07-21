@@ -1,0 +1,29 @@
+@layer components {
+  .btn-primary-solid {
+    @apply bg-primary-500 text-white focus:bg-primary-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
+  }
+
+  .btn-secondary-solid {
+    @apply bg-secondary-500 text-white focus:bg-secondary-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
+  }
+
+  .btn-success-solid {
+    @apply bg-success-500 text-white focus:bg-success-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
+  }
+
+  .btn-info-solid {
+    @apply bg-info-500 text-white focus:bg-info-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
+  }
+
+  .btn-warning-solid {
+    @apply bg-warning-500 text-white focus:bg-warning-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
+  }
+
+  .btn-danger-solid {
+    @apply bg-danger-500 text-white focus:bg-danger-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
+  }
+
+  .btn-dark-solid {
+    @apply bg-dark-500 text-white focus:bg-dark-600 enabled:hover:bg-opacity-90 dark:text-slate-200;
+  }
+}

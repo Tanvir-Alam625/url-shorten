@@ -4,6 +4,9 @@
 
 // Font
 @import 'fonts';
-*,body{
+
+// Components
+@import "./components/button/index";
+body{
     @apply bg-dark-50 text-dark-700;
 }

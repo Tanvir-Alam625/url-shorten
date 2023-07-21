@@ -1,0 +1,62 @@
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-primary transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  // Button Sizes
+  .btn-xs {
+    @apply px-2 py-1 text-xs;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+
+  .btn-md {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-5 py-2.5 text-base;
+  }
+
+  .btn-xl {
+    @apply px-6 py-3 text-base;
+  }
+
+  // Button groups
+  .btn-group {
+    @apply inline-flex rounded-primary;
+
+    .btn {
+      @apply rounded-none;
+    }
+
+    .btn:first-child {
+      @apply rounded-l-primary;
+    }
+
+    .btn:last-child {
+      @apply rounded-r-primary border-l-0;
+    }
+
+    .btn:not(:first-child):not(:last-child) {
+      @apply border-l-0;
+    }
+
+    &.rounded {
+      .btn:first-child {
+        @apply rounded-l-full;
+      }
+
+      .btn:last-child {
+        @apply rounded-r-full;
+      }
+    }
+  }
+}
+
+@import 'solid';
+@import 'outline';
+@import 'soft';
+@import 'plain';

@@ -1,0 +1,29 @@
+@layer components {
+  .btn-primary-soft {
+    @apply bg-primary-100 text-primary-500 focus:bg-primary-200 focus:text-primary-600 enabled:hover:bg-primary-200 ;
+  }
+
+  .btn-secondary-soft {
+    @apply bg-secondary-100 text-secondary-500 focus:bg-secondary-200 focus:text-secondary-600 enabled:hover:bg-secondary-200 ;
+  }
+
+  .btn-success-soft {
+    @apply bg-success-100 text-success-500 focus:bg-success-200 focus:text-success-600 enabled:hover:bg-success-200 ;
+  }
+
+  .btn-info-soft {
+    @apply bg-info-100 text-info-500 focus:bg-info-200 focus:text-info-600 enabled:hover:bg-info-200 dark:bg-info-800;
+  }
+
+  .btn-warning-soft {
+    @apply bg-warning-100 text-warning-500 focus:bg-warning-200 focus:text-warning-600 enabled:hover:bg-warning-200 ;
+  }
+
+  .btn-danger-soft {
+    @apply bg-danger-100 text-danger-500 focus:bg-danger-200 focus:text-danger-600 enabled:hover:bg-danger-200 ;
+  }
+
+  .btn-dark-soft {
+    @apply bg-dark-200 text-dark-500 focus:bg-dark-300 focus:text-dark-600 enabled:hover:bg-dark-300 ;
+  }
+}

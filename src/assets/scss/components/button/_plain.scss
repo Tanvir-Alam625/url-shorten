@@ -1,0 +1,29 @@
+@layer components {
+  .btn-primary-plain {
+    @apply text-primary-500 focus:bg-primary-100 focus:text-primary-600 enabled:hover:bg-primary-100;
+  }
+
+  .btn-secondary-plain {
+    @apply text-secondary-500 focus:bg-secondary-100 focus:text-secondary-600 enabled:hover:bg-secondary-100;
+  }
+
+  .btn-success-plain {
+    @apply text-success-500 focus:bg-success-100 focus:text-success-600 enabled:hover:bg-success-100;
+  }
+
+  .btn-info-plain {
+    @apply text-info-500 focus:bg-info-100 focus:text-info-600 enabled:hover:bg-info-100;
+  }
+
+  .btn-warning-plain {
+    @apply text-warning-500 focus:bg-warning-100 focus:text-warning-600 enabled:hover:bg-warning-100;
+  }
+
+  .btn-danger-plain {
+    @apply text-danger-500 focus:bg-danger-100 focus:text-danger-600 enabled:hover:bg-danger-100;
+  }
+
+  .btn-dark-plain {
+    @apply text-dark-500 focus:bg-dark-100 focus:text-dark-600 enabled:hover:bg-dark-200;
+  }
+}
