@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 
 export interface ShortUrl {
   id: string;
@@ -28,6 +28,5 @@ export function useShortUrls() {
     const updatedUrls = shortUrls.filter((url) => url.id !== id);
     setShortUrls(updatedUrls);
   };
-  console.log(shortUrls);
   return { shortUrls, addShortUrl, updateShortUrl, deleteShortUrl };
 }

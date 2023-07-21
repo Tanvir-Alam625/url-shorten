@@ -18,7 +18,7 @@ const ListItem = ({ index, shortUrl, longUrl, id, handleDeleteUrl }: PropsType) 
     <li className="flex flex-wrap items-center justify-between gap-2 rounded-primary bg-dark-50 p-4 text-sm">
       <div className="flex items-center gap-2">
         <p>{index}.</p>
-        <Link to="#" className="text-dark-700 hover:text-primary-500  hover:underline">
+        <Link to={longUrl} target="_blank" className="text-dark-700 hover:text-primary-500  hover:underline">
           {shortUrl}
         </Link>
       </div>
