@@ -1,10 +1,6 @@
 # Url Shorten
 
 I created Url Shorten App with React, TailwindCSS, and TypeScript.
-
-
-# URL Shortening System
-
 The URL Shortening System is a simple web application that allows users to shorten long URLs into shorter, more manageable links. It stores the shortened URLs in the browser's localStorage, making it easy for users to access and manage their list of shortened links without the need for any server-side storage.
 
 ## Table of Contents
@@ -46,7 +42,7 @@ To use the URL Shortening System, follow the steps below:
 2. In the input field, enter the long URL that you want to shorten.
 3. Click the "Shorten URL" button to generate a shortened link.
 4. The shortened link will be displayed below the input field.
-4. To visit the original  URL, simply click on the shortened link.
+5. To visit the original URL, simply click on the shortened link.
 
 ### Edit Page
 
@@ -60,7 +56,7 @@ To use the URL Shortening System, follow the steps below:
 
 1. Access the List page of the application.
 2. You will see a list of all the shortened links that you have previously created.
-3. To visit the original  URL, simply click on the shortened link.
+3. To visit the original URL, simply click on the shortened link.
 4. The long URL will open in a new browser tab.
 
 ## Installation
