@@ -1,15 +1,20 @@
 import { Button, Card, Input } from '@/components/shared';
 import { useRandomText } from '@/hooks/useRandomText';
 import { ShortUrl, useShortUrls } from '@/hooks/useShorten';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+
+export const isValidUrl = (url: string) => {
+  const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+  return urlPattern.test(url);
+};
 const HomePage = () => {
   const [urlValue, setUrlValue] = useState('');
   const { addShortUrl, shortUrls } = useShortUrls();
+  const isValid = useMemo(() => isValidUrl(urlValue), [urlValue]);
 
   const handleAddShortenUrl = () => {
-    if (!urlValue.length) return;
+    if (!urlValue.length || !isValid) return;
     let text = useRandomText(7);
-
     const isExist = shortUrls?.find((item: ShortUrl) => {
       if (item.id === text) {
         text = useRandomText(7);
@@ -25,7 +30,6 @@ const HomePage = () => {
 
     const urlData: ShortUrl = { id: text, longUrl: urlValue, shortUrl: `https://urlshorten/${text}` };
     addShortUrl(urlData);
-    console.log(shortUrls);
     setUrlValue('');
   };
 
@@ -37,6 +41,7 @@ const HomePage = () => {
         </Card.Header>
         <Card.Body>
           <Input
+            isValid={isValid}
             type="text"
             inputSize="lg"
             value={urlValue}
